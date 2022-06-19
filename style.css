@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.title {
+  cursor: pointer;
+
+}
+
+td, th {
+  padding: 10px;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border: 1px solid lightblue;
+}
+
+.col-auto {
+  width: 100%;
+}
+
+.form-control {
+    color: black;
+}
+
+.row {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form-control {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Это стили для не валидных полей */
+div > input:invalid{
+    border-color: #900;
+    background-color: #FDD;
+  }
+
+div > input:valid{
+  border-color: rgb(46, 175, 29);
+  background-color: lightgreen;
+}
+
+
+  
+div > input:focus:invalid {
+    outline: none;
+  }
+
+  /* Это стили для кастомных сообщений об ошибке */
+  .error {
+    width  : 100%;
+    padding: 0;
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+  }
+  
+  .error.active {
+    padding: 0.3em;
+  }
+
+  div > input::-webkit-outer-spin-button,
+  div > input::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+  div > input[type='number'] {
+    -moz-appearance: textfield;
+  }
